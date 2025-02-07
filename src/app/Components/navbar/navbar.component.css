@@ -1,0 +1,37 @@
+.navbar{
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+}
+
+.navbarheadings {
+  font-size: 17px;
+  color: #242323;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.navbarheadings:hover {
+  opacity: 0.5;
+}
+
+.navbarbutton{
+    border: none;
+    /* background-color: #dcb485; */
+    background-color: #dbb384;
+}
+
+.iconcolor{
+    color: white;
+}
+
+.logoparent {
+  width: 120px; /* Set the width and height to the same value to make it a circle */
+  height: 120px;
+  border-radius: 50%; /* This makes the div circular */
+  overflow: hidden; /*Ensures the image stays within the circular boundary*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
