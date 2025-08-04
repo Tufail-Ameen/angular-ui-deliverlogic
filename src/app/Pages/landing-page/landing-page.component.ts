@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SliderComponent } from "../../Components/slider/slider.component";
+import { LandingsliderComponent } from "../../Components/landingslider/landingslider.component";
 
 @Component({
   selector: 'app-landing-page',
-  imports: [SliderComponent],
+  imports: [LandingsliderComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
