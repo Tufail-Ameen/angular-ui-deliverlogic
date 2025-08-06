@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
+  imports: [IonicModule, CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+
+  isReady = false;
+
+  constructor() {
+    // Simple, clean navbar component
+  }
+
+  ngOnInit() {
+    // Ensure all components are loaded before showing
+    setTimeout(() => {
+      this.isReady = true;
+    }, 100);
+  }
 
 }

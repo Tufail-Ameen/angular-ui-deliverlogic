@@ -1,0 +1,33 @@
+/* Content section styling */
+.content-section {
+  padding: 40px 20px;
+  background: white;
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.content-section h4 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content-section p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Ensure the page flows properly */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Make sure content is scrollable */
+body {
+  overflow-y: auto;
+}

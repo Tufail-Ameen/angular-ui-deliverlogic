@@ -1,0 +1,145 @@
+/* Single navbar with layout shift prevention */
+ion-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  min-height: 60px;
+  z-index: 1000;
+  background: transparent;
+  box-shadow: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+ion-header.ready {
+  opacity: 1;
+}
+
+ion-toolbar {
+  height: 60px;
+  min-height: 60px;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: transparent;
+}
+
+ion-grid {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ion-row {
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+ion-col {
+  padding: 0;
+  margin: 0;
+}
+
+.logo-container {
+  padding: 10px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+}
+
+.logo-image {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 15px;
+  height: 100%;
+  min-width: 300px;
+  gap: 15px;
+  /* Consistent spacing between links */
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+  height: 40px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-width: 50px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-icon {
+  height: 35px;
+  width: 35px;
+  padding: 3px 2px;
+  border-radius: 3px;
+  background-color: var(--ion-primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent layout shift for ion-icon */
+ion-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/* Ensure consistent loading state */
+.nav-links ion-icon {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+/* Fallback for when ion-icon is loading */
+.nav-links ion-icon:not(:defined) {
+  opacity: 0;
+}
+
+/* Ensure the navbar maintains its structure during loading */
+ion-header {
+  contain: layout style paint;
+}
+
+ion-toolbar {
+  contain: layout style paint;
+}
