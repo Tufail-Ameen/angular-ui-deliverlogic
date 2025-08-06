@@ -46,15 +46,15 @@ ion-col {
 }
 
 .logo-container {
-  padding: 10px 20px;
-  height: 100%;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
   min-width: 120px;
 }
 
 .logo-image {
-  width: 80px;
+  cursor: pointer;
+  width: 60px;
   height: auto;
   object-fit: contain;
   display: block;
@@ -72,6 +72,7 @@ ion-col {
 }
 
 .nav-link {
+  cursor: pointer;
   color: white;
   font-size: 16px;
   margin: 0;
@@ -90,7 +91,7 @@ ion-col {
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #c4bbb6;
 }
 
 .menu-icons {
@@ -113,6 +114,10 @@ ion-col {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.menu-icons:hover {
+  // background-color: #c4bbb6;
 }
 
 /* Prevent layout shift for ion-icon */
