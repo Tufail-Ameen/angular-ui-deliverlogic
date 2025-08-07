@@ -116,8 +116,9 @@ ion-col {
   justify-content: center;
 }
 
-.menu-icons:hover {
-  // background-color: #c4bbb6;
+.menu-icon:hover {
+  cursor: pointer;
+  background-color: #c4bbb6;
 }
 
 /* Prevent layout shift for ion-icon */
