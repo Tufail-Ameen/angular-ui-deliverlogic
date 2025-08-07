@@ -1,0 +1,75 @@
+/* Import Swiper styles */
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+@use 'swiper/css/effect-fade';
+
+/* Global Styles */
+:root {
+  --ion-color-primary: #242323;
+  --ion-color-secondary: #d9b186;
+}
+
+/* Critical CSS to prevent layout shift */
+html {
+  scroll-padding-top: 60px;
+  /* Account for fixed navbar */
+}
+
+/* Ensure full viewport height is available */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  /* Removed padding-top since navbar is transparent and overlays on slider */
+  overflow-y: auto;
+}
+
+/* Prevent layout shift during Ionic initialization */
+ion-header {
+  contain: layout;
+}
+
+ion-toolbar {
+  contain: layout;
+}
+
+/* Ensure Ionic components are properly styled */
+ion-segment {
+  --background: #E9E9E9;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 1rem 0rem;
+  height: 40px;
+  width: fit-content;
+  min-width: 200px;
+}
+
+ion-segment-button {
+  --background: transparent;
+  --background-checked: #212020;
+  --color: #666666;
+  --color-checked: #ffffff;
+  --indicator-color: transparent;
+  min-height: 28px;
+  font-size: 14px;
+  text-transform: none;
+  border-radius: 16px;
+  margin: 0;
+  transition: all .3s ease;
+}
+
+ion-segment-button::part(indicator) {
+  display: none;
+}
+
+.border {
+  border: 2px solid red;
+}

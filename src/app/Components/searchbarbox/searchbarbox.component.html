@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<!-- Main Heading -->
+<ion-grid class="">
+
+  <ion-row>
+    <ion-col size="1" class=""></ion-col>
+    <ion-col size="5" class="searchbox ">
+      <ion-row>
+        <ion-col size="12">
+          <div class="welcome-text">Welcome to Food Yard</div>
+          <div class="header-tagline">HEADER TAG LINE</div>
+          <div class="mainheading">Delivery & Takeout</div>
+          <!-- segment button -->
+          <ion-segment [(ngModel)]="segmentValue1" name="segmentValue1">
+            <ion-segment-button value="segment">
+              <ion-label>Segment</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="buttons">
+              <ion-label>Button</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+
+
+          <!-- <div class="radio-container">
+            <input type="radio" id="delivery" name="order" value="delivery" />
+            <label for="delivery">Delivery</label>
+            <input type="radio" id="takeout" name="order" value="takeout" checked />
+            <label for="takeout">Takeout</label>
+          </div> -->
+          <div class="parentsearch">
+            <span class="icon">
+              <i class="fa-solid fa-location-dot fa-lg iconcolor"></i>
+            </span>
+            <input class="form-control searchinput" list="datalistOptions" id="exampleDataList"
+              placeholder="Street Address" />
+          </div>
+          <button type="button" class="gobutton">
+            GO!
+          </button>
+          <div class="hr-with-text">
+            <span>or</span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="6" class=""></ion-col>
+  </ion-row>
+
+
+  <ion-searchbar></ion-searchbar>
+<ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
+<ion-searchbar disabled="true" placeholder="Disabled"></ion-searchbar>
+<ion-searchbar value="Value"></ion-searchbar>
+<ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
+
+</ion-grid>
