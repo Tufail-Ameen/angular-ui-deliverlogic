@@ -13,10 +13,6 @@ export class NavbarComponent implements OnInit {
 
   isReady = false;
 
-  constructor() {
-    // Simple, clean navbar component
-  }
-
   ngOnInit() {
     // Ensure all components are loaded before showing
     setTimeout(() => {

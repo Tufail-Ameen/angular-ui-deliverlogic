@@ -40,6 +40,11 @@
             "styles": [
               "src/global.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            },
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -119,8 +124,13 @@
               }
             ],
             "styles": [
-            "src/global.scss"
+              "src/global.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            },
             "scripts": []
           }
         },
