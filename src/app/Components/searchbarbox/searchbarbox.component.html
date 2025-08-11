@@ -11,7 +11,7 @@
           <div class="header-tagline">HEADER TAG LINE</div>
           <div class="mainheading">Delivery & Takeout</div>
           <!-- segment button -->
-          <ion-segment [(ngModel)]="segmentValue1" name="segmentValue1">
+          <ion-segment mode="md" [(ngModel)]="segmentValue1" name="segmentValue1">
             <ion-segment-button value="segment">
               <ion-label>Segment</ion-label>
             </ion-segment-button>
@@ -45,12 +45,4 @@
     </ion-col>
     <ion-col size="6" class=""></ion-col>
   </ion-row>
-
-
-  <ion-searchbar></ion-searchbar>
-<ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
-<ion-searchbar disabled="true" placeholder="Disabled"></ion-searchbar>
-<ion-searchbar value="Value"></ion-searchbar>
-<ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
-
 </ion-grid>
