@@ -4,45 +4,30 @@
 
   <ion-row>
     <ion-col size="1" class=""></ion-col>
-    <ion-col size="5" class="searchbox ">
+    <ion-col size="6">
       <ion-row>
-        <ion-col size="12">
-          <div class="welcome-text">Welcome to Food Yard</div>
-          <div class="header-tagline">HEADER TAG LINE</div>
-          <div class="mainheading">Delivery & Takeout</div>
-          <!-- segment button -->
-          <ion-segment mode="md" [(ngModel)]="segmentValue1" name="segmentValue1">
-            <ion-segment-button value="segment">
-              <ion-label>Segment</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="buttons">
-              <ion-label>Button</ion-label>
-            </ion-segment-button>
-          </ion-segment>
-
-
-          <!-- <div class="radio-container">
-            <input type="radio" id="delivery" name="order" value="delivery" />
-            <label for="delivery">Delivery</label>
-            <input type="radio" id="takeout" name="order" value="takeout" checked />
-            <label for="takeout">Takeout</label>
-          </div> -->
-          <div class="parentsearch">
-            <span class="icon">
-              <i class="fa-solid fa-location-dot fa-lg iconcolor"></i>
-            </span>
-            <input class="form-control searchinput" list="datalistOptions" id="exampleDataList"
-              placeholder="Street Address" />
-          </div>
-          <button type="button" class="gobutton">
-            GO!
-          </button>
-          <div class="hr-with-text">
-            <span>or</span>
-          </div>
+        <ion-col size="11" class="searchbox">
+          <ion-row>
+            <ion-col size="12">
+              <div class="welcome-text">Welcome to Food Yard</div>
+              <div class="header-tagline">HEADER TAG LINE</div>
+              <div class="mainheading">Delivery & Takeout</div>
+              <div class="" style="width: 50%;">
+                <!-- segment button -->
+                <ion-segment [(ngModel)]="segmentValue1" name="segmentValue1" class="segment-container">
+                  <ion-segment-button value="segment" class="segment-button">
+                    <ion-label class="segment-label">Delivery</ion-label>
+                  </ion-segment-button>
+                  <ion-segment-button value="buttons" class="segment-button">
+                    <ion-label class="segment-label">Takeout</ion-label>
+                  </ion-segment-button>
+                </ion-segment>
+              </div>
+            </ion-col>
+          </ion-row>
         </ion-col>
       </ion-row>
     </ion-col>
-    <ion-col size="6" class=""></ion-col>
+    <ion-col size="5" class=""></ion-col>
   </ion-row>
 </ion-grid>

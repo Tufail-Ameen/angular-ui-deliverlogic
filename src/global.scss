@@ -38,3 +38,27 @@ body {
 .border {
   border: 2px solid red;
 }
+
+/* Global Ionic segment button text centering */
+ion-segment ion-segment-button {
+  text-align: center !important;
+}
+
+ion-segment ion-segment-button ion-label {
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Override Ionic's default segment button behavior */
+ion-segment ion-segment-button .button-native {
+  text-align: center !important;
+}
+
+/* Force all text within segment buttons to be centered */
+ion-segment ion-segment-button * {
+  text-align: center !important;
+}
