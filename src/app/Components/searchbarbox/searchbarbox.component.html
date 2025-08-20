@@ -4,27 +4,49 @@
 
   <ion-row>
     <ion-col size="1" class=""></ion-col>
-    <ion-col size="6">
+    <ion-col size="6" class="">
       <ion-row>
-        <ion-col size="11" class="searchbox">
-          <ion-row>
-            <ion-col size="12">
-              <div class="welcome-text">Welcome to Food Yard</div>
-              <div class="header-tagline">HEADER TAG LINE</div>
-              <div class="mainheading">Delivery & Takeout</div>
-              <div class="" style="width: 50%;">
-                <!-- segment button -->
-                <ion-segment [(ngModel)]="segmentValue1" name="segmentValue1" class="segment-container">
-                  <ion-segment-button value="segment" class="segment-button">
-                    <ion-label class="segment-label">Delivery</ion-label>
-                  </ion-segment-button>
-                  <ion-segment-button value="buttons" class="segment-button">
-                    <ion-label class="segment-label">Takeout</ion-label>
-                  </ion-segment-button>
-                </ion-segment>
-              </div>
-            </ion-col>
-          </ion-row>
+        <ion-col size="12" class="searchbox ">
+          <div class="welcome-text">Welcome to Food Yard</div>
+          <div class="header-tagline">HEADER TAG LINE</div>
+          <div class="mainheading">Delivery & Takeout</div>
+          <div class="" style="width: 40%;">
+            <!-- segment button -->
+            <ion-segment [(ngModel)]="segmentValue1" name="segmentValue1" class="segment-container">
+              <ion-segment-button value="segment" class="segment-button">
+                <ion-label class="segment-label">Delivery</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="buttons" class="segment-button">
+                <ion-label class="segment-label">Takeout</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+          <div class="input-container">
+            <ion-input class="searchinput" placeholder="(Address) Show resturants near you">
+              <ion-icon name="location" class="search-icon"></ion-icon>
+            </ion-input>
+            <ion-button class="search-button">GO</ion-button>
+          </div>
+          <div class="search-options">
+            <div>
+              <ion-icon name="storefront" class="places-icon"></ion-icon>
+              <span class="title">Places</span>
+            </div>
+            <div>
+              <span class="description">Bases/Hotel/School/Workplace/Etc..</span>
+            </div>
+          </div>
+
+          <!-- OR separator and view all restaurants link -->
+          <div class="or-separator">
+            <div class="separator-line"></div>
+            <span class="or-text">OR</span>
+            <div class="separator-line"></div>
+          </div>
+
+          <div class="view-all-restaurants">
+            <a href="#" class="view-all-link">View all restaurants</a>
+          </div>
         </ion-col>
       </ion-row>
     </ion-col>

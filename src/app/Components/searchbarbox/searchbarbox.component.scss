@@ -5,19 +5,20 @@
 
 .searchbox {
   background-color: #ffffff;
-  padding: 25px;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .welcome-text {
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0px;
-  color: var(--ion-color-primary);
+  color: var(--ion-color-secondary);
   margin-bottom: 8px;
 }
 
 .header-tagline {
-  color: var(--ion-color-secondary);
+  color: var(--ion-color-primary);
   font-size: 63px;
   font-weight: 700;
   width: 100%;
@@ -31,7 +32,7 @@
   line-height: 0.9;
   margin-top: 14px;
   font-size: 120px;
-  color: var(--ion-color-primary);
+  color: var(--ion-color-secondary);
   font-family: "Get Show", cursive;
 }
 
@@ -100,81 +101,108 @@
 }
 
 /* Search Input */
-.searchinput {
-  padding: 12px 37px;
-  background: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.parentsearch {
-  position: relative;
-}
-
-.icon {
-  position: absolute;
-  top: 22%;
-  left: 3%;
-}
-
-.iconcolor {
-  color: #d4d4d4;
-}
-
-.gobutton {
-  background-color: #242323;
-  opacity: 0.5;
-  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-  color: #eae8e3;
-  font-weight: 600;
-  padding: 8px 16px;
-}
-
-/* hr line */
-.hr-with-text {
+.input-container {
   display: flex;
   align-items: center;
-  text-align: center;
-  color: #aba2a2;
-  margin: 8px 0;
-}
-
-.hr-with-text::before,
-.hr-with-text::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid #aba2a2;
-  margin: 5px;
-  text-shadow: 1px 1px 8px, 0 0 1em white, 0 0 0.3em;
-}
-
-/* Utility classes */
-.text-center {
-  text-align: center;
-}
-
-.form-control {
   width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
+  padding: 3px;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
 }
 
-/* Ionic grid overrides */
-ion-grid {
-  padding: 0;
-  margin: 0;
+.searchinput {
+  flex: 1;
+  --padding-start: 40px;
+  --padding-end: 10px;
+  border-radius: 4px;
+  height: auto;
+  box-shadow: none;
+  position: relative;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-ion-row {
-  margin: 0;
-  padding: 0;
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  z-index: 10;
+  pointer-events: none;
 }
 
-ion-col {
-  padding: 0;
-  margin: 0;
+.search-button {
+  margin-left: 8px;
+  min-width: 50px;
+  height: auto;
+}
+
+.search-options {
+  margin-top: 10px;
+
+  text-align: end;
+  align-items: center;
+  font-size: 12px;
+}
+
+.places-icon {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* OR Separator and View All Restaurants */
+.or-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.separator-line {
+  height: 1px;
+  background-color: #d3d3d3;
+  flex: 1;
+}
+
+.or-text {
+  color: #aba2a2;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+.view-all-restaurants {
+  text-align: center;
+}
+
+.view-all-link {
+  color: var(--ion-color-secondary);
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: #666666;
 }
 
 /* Component visibility */

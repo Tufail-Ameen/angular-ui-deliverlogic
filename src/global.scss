@@ -10,8 +10,28 @@
 @import '@ionic/angular/css/display.css';
 
 :root {
-  --ion-color-primary: #242323;
-  --ion-color-secondary: #d9b186;
+  --ion-color-primary: #d9b186;
+  --ion-color-secondary: #242323;
+  --ion-color-button: #8a8989;
+  --ion-color-button-text: #ffffff;
+  --ion-color-icon: #453f3e;
+  --ion-color-placeholder: #3e3e3e;
+}
+
+/* Global Buttons */
+ion-button {
+  --background: var(--ion-color-button);
+  --color: var(--ion-color-button-text);
+}
+
+/* Global Icons */
+ion-icon {
+  color: var(--ion-color-icon);
+}
+
+ion-input {
+  --placeholder-color: var(--ion-color-placeholder) !important;
+  --placeholder-opacity: 1 !important;
 }
 
 /* Critical CSS to prevent layout shift */
@@ -61,4 +81,19 @@ ion-segment ion-segment-button .button-native {
 /* Force all text within segment buttons to be centered */
 ion-segment ion-segment-button * {
   text-align: center !important;
+}
+
+ion-grid {
+  padding: 0px;
+  margin: 0px;
+}
+
+ion-row {
+  padding: 0px;
+  margin: 0px;
+}
+
+ion-col {
+  padding: 0px;
+  margin: 0px;
 }
