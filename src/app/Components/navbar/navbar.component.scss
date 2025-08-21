@@ -1,6 +1,6 @@
 /* Single navbar with layout shift prevention */
 ion-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -43,6 +43,10 @@ ion-row {
 ion-col {
   padding: 0;
   margin: 0;
+}
+
+ion-icon {
+  color: white;
 }
 
 .logo-container {
@@ -110,7 +114,7 @@ ion-col {
   width: 35px;
   padding: 3px 2px;
   border-radius: 3px;
-  background-color: var(--ion-color-secondary);
+  background-color: var(--ion-color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +125,6 @@ ion-col {
   background-color: #c4bbb6;
 }
 
-/* Prevent layout shift for ion-icon */
 ion-icon {
   display: block;
   width: 24px;
@@ -130,18 +133,15 @@ ion-icon {
   min-height: 24px;
 }
 
-/* Ensure consistent loading state */
 .nav-links ion-icon {
   opacity: 1;
   transition: opacity 0.1s ease;
 }
 
-/* Fallback for when ion-icon is loading */
 .nav-links ion-icon:not(:defined) {
   opacity: 0;
 }
 
-/* Ensure the navbar maintains its structure during loading */
 ion-header {
   contain: layout style paint;
 }
