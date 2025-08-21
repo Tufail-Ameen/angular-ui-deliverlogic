@@ -18,13 +18,33 @@
   --ion-color-placeholder: #3e3e3e;
 }
 
-/* Global Buttons */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-grid {
+  padding: 0px;
+  margin: 0px;
+}
+
+ion-row {
+  padding: 0px;
+  margin: 0px;
+}
+
+ion-col {
+  padding: 0px;
+  margin: 0px;
+}
+
 ion-button {
   --background: var(--ion-color-button);
   --color: var(--ion-color-button-text);
 }
 
-/* Global Icons */
 ion-icon {
   color: var(--ion-color-icon);
 }
@@ -32,27 +52,6 @@ ion-icon {
 ion-input {
   --placeholder-color: var(--ion-color-placeholder) !important;
   --placeholder-opacity: 1 !important;
-}
-
-/* Critical CSS to prevent layout shift */
-html {
-  scroll-padding-top: 60px;
-  /* Account for fixed navbar */
-}
-
-/* Ensure full viewport height is available */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100vh;
-  overflow-y: auto;
 }
 
 .border {
@@ -81,19 +80,4 @@ ion-segment ion-segment-button .button-native {
 /* Force all text within segment buttons to be centered */
 ion-segment ion-segment-button * {
   text-align: center !important;
-}
-
-ion-grid {
-  padding: 0px;
-  margin: 0px;
-}
-
-ion-row {
-  padding: 0px;
-  margin: 0px;
-}
-
-ion-col {
-  padding: 0px;
-  margin: 0px;
 }
