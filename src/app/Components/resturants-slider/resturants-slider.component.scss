@@ -1,0 +1,24 @@
+.title {
+    color: var(--ion-color-secondary);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+swiper-slide {
+    margin-bottom: 25px !important;
+    margin-top: 20px !important;
+}
+
+resturant-slide-img {
+    height: 18vh !important;
+    width: 19vw !important;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.view-all-resturants-button {
+    margin-top: 15px !important;
+    --font-weight: 900 !important;
+    --border-radius: 40px !important;
+    --background: var(--ion-color-primary) !important;
+}
