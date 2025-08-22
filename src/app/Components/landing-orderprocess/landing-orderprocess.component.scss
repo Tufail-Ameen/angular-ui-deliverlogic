@@ -1,0 +1,107 @@
+.order-process-container {
+    background-image: url('/assets/images/order-process.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 550px;
+    height: 550px;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 30px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+}
+
+.order-process-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.title {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--ion-color-button-text);
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+}
+
+.step {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn {
+    color: var(--ion-primary-text-dark);
+    background: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.icon {
+    background: var(--ion-color-secondary);
+    padding: 32px;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.text {
+    font-weight: 500;
+    color: var(--ion-color-button-text);
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.start-order-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.start-order-btn {
+    --padding-start: 3em;
+    --padding-end: 3em;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    background: var(--ion-color-primary);
+    color: var(--ion-color-button-text);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s;
+    border: none;
+}
+
+.start-order-btn:hover {
+    background: #7c7c7c;
+}
