@@ -1,0 +1,67 @@
+.retail-card-container {
+    background-image: url('/assets/images/dl_tips.png');
+    padding: 20px 0px 32px 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: 60%;
+}
+
+.swiper-wrapper {
+    margin-bottom: 24px;
+    height: auto;
+    width: 40%;
+    padding: 0 10px;
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.card-container {
+    border-radius: 10px;
+    height: 100%;
+    background-color: var(--ion-color-secondary);
+    box-sizing: border-box;
+}
+
+.card-image {
+    box-sizing: border-box;
+}
+
+.card-content {
+    padding: 5px 20px 30px;
+    color: var(--ion-color-button-text);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 6px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.retail-card-btn-container {
+    display: flex;
+    justify-content: center;
+    bottom: 12px;
+    position: absolute;
+    width: 84%;
+}
+
+.retail-card-btn-container ion-button {
+    --background: var(--ion-color-button-text) !important;
+    --color: var(--ion-color-secondary) !important;
+    --padding-start: 2em;
+    --padding-end: 2em;
+    --border-radius: 25px;
+}
