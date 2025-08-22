@@ -51,14 +51,42 @@
 .info {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.price-container {
+    display: flex;
+    color: #7c7c7c;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.price-icon {
+    color: #7c7c7c;
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.price {
+    color: #7c7c7c;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.distance-container {
+    display: flex;
+    font-weight: 700;
+
+}
+
+.location-icon {
+    font-size: 18px;
+    margin-right: 4px;
 }
 
 .distance {
-    color: #7c7c7c;
-    font-weight: 700;
-}
-
-.time {
     color: var(--ion-color-secondary);
-    font-weight: 700;
+    font-size: 13px;
 }
