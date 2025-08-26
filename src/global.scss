@@ -10,12 +10,13 @@
 @import '@ionic/angular/css/display.css';
 
 :root {
-  --ion-color-primary: #d9b186;
-  --ion-color-secondary: #242323;
+  --ion-color-primary: #d9b186; //#d9b186
+  --ion-color-secondary: #242323; //#242323
   --ion-color-button: #8a8989;
   --ion-color-button-text: #ffffff;
   --ion-color-icon: #453f3e;
   --ion-color-placeholder: #3e3e3e;
+  --ion-color-footer-bg: #242324;
 }
 
 html,
@@ -23,6 +24,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  font-size: 12px;
 }
 
 ion-grid {

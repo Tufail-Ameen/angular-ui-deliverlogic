@@ -8,11 +8,12 @@ import { ResturantsSliderComponent } from "../../Components/resturants-slider/re
 import { LandingCardsComponent } from "../../Components/landing-cards/landing-cards.component";
 import { LandingOrderprocessComponent } from "../../Components/landing-orderprocess/landing-orderprocess.component";
 import { LandingRetailcardComponent } from "../../Components/landing-retailcard/landing-retailcard.component";
+import { FooterComponent } from "../../Components/footer/footer.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [IonicModule, LandingsliderComponent, NavbarComponent, SearchbarboxComponent, LandingBannerComponent, ResturantsSliderComponent, LandingCardsComponent, LandingOrderprocessComponent, LandingRetailcardComponent],
+  imports: [IonicModule, LandingsliderComponent, NavbarComponent, SearchbarboxComponent, LandingBannerComponent, ResturantsSliderComponent, LandingCardsComponent, LandingOrderprocessComponent, LandingRetailcardComponent, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
