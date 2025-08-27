@@ -52,24 +52,36 @@
     color: #fff;
 }
 
-.title {
+.title-without-padding {
     color: #7c7c7c;
     font-weight: 700;
     font-size: 20px;
     margin-bottom: .8em;
 }
 
+.title {
+    color: #7c7c7c;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: .8em;
+    padding-left: 35px;
+}
+
+.address {
+    font-family: 'Poppins', sans-serif;
+}
+
 .order-list {
-    margin: 0px;
     padding: 0px;
 }
 
 ul li {
     list-style-type: none;
-    margin-bottom: 4px;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul li a {
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     font-size: 16px;
     text-decoration: none;
