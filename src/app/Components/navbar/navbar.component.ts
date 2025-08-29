@@ -14,19 +14,30 @@ import { Router } from '@angular/router';
 
 
 export class NavbarComponent implements OnInit {
+
+  // Properties
+  isReady = false;
+  isRestaurantPage = false;
+
   constructor(private router: Router) { }
 
   navigatetohome() {
     this.router.navigate(['/']);
   }
 
-  isReady = false;
 
   ngOnInit() {
+    // Check current route
+    this.checkCurrentRoute();
+
     // Ensure all components are loaded before showing
     setTimeout(() => {
       this.isReady = true;
     }, 100);
   }
 
+  checkCurrentRoute() {
+    const currentUrl = this.router.url;
+    this.isRestaurantPage = currentUrl.includes('/resturant-page');
+  }
 }

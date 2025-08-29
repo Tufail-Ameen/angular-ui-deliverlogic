@@ -1,25 +1,24 @@
-<ion-header [class.ready]="isReady">
-  <ion-toolbar>
-    <ion-grid>
-      <ion-row>
-        <ion-col size="4">
-          <div class="logo-container">
-            <img (click)="navigatetohome()" src="/assets/images/glue logo.png" alt="Takeout Taxi Logo"
-              class="logo-image" />
-          </div>
-        </ion-col>
-        <ion-col size="2"></ion-col>
-        <ion-col size="6">
-          <div class="nav-links">
-            <a class="nav-link" routerLink="/resturant-page">Restaurants</a>
-            <a class="nav-link" routerLink="">Reservations</a>
-            <a class="nav-link" routerLink="">Login / Sign Up</a>
-            <a class="menu-icons">
-              <ion-icon name="menu" class="menu-icon" size="large"></ion-icon>
-            </a>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-toolbar>
-</ion-header>
+<ion-grid class="navbar-container" [class.ready]="isReady"
+  [class.resturant-page-navbar-container]="isRestaurantPage">
+  <ion-row>
+    <ion-col size="4">
+      <div class="logo-container">
+        <img (click)="navigatetohome()" src="/assets/images/glue logo.png" alt="Takeout Taxi Logo" class="logo-image" />
+      </div>
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="6">
+      <div class="nav-links">
+        <a class="nav-link" [class.restaurant-page-nav-link]="isRestaurantPage"
+          routerLink="/resturant-page">Restaurants</a>
+        <a class="nav-link" [class.restaurant-page-nav-link]="isRestaurantPage" routerLink="/resturant-page"
+          routerLink="">Reservations</a>
+        <a class="nav-link" [class.restaurant-page-nav-link]="isRestaurantPage" routerLink="/resturant-page"
+          routerLink="">Login / Sign Up</a>
+        <a class="menu-icons">
+          <ion-icon name="menu" class="menu-icon" size="large"></ion-icon>
+        </a>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
