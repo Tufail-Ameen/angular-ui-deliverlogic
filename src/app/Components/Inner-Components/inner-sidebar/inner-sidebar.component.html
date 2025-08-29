@@ -1,26 +1,48 @@
-<main class="">
-  <div class="">
-    <div class="clear-all">Clear All</div>
+<main>
+  <div class="clear-all">Clear All</div>
 
-    <div class="ion_web_inline">
-      <h1 class="search-by-text">Search by</h1>
-    </div>
-
-    <form action="" class="search-form">
-      <ion-item class="search-input-container">
-        <ion-input class="search-input" type="text" placeholder="Restaurants or Cuisine..."></ion-input>
-        <div class="search-button">
-          <img src="assets/images/search.png" alt="image not found">
-        </div>
-      </ion-item>
-    </form>
-
-    <h1 class="sort-by-text">Sort by</h1>
-
-    <div class="sort-by-container">
-      <div class="sort-by-item">Name</div>
-      <div class="sort-by-item">Min.Order</div>
-      <div class="sort-by-item">Distance</div>
-    </div>
+  <div class="ion_web_inline">
+    <h1 class="sliebar-headings">Search by</h1>
   </div>
+
+  <form action="" class="search-form">
+    <ion-item class="search-input-container">
+      <ion-input class="search-input" type="text" placeholder="Restaurants or Cuisine..."></ion-input>
+      <div class="search-button">
+        <img src="assets/images/search.png" alt="image not found">
+      </div>
+    </ion-item>
+  </form>
+
+  <h1 class="sliebar-headings">Sort by</h1>
+
+  <div class="sort-by-container">
+    <div class="sort-by-item">Name</div>
+    <div class="sort-by-item">Min.Order</div>
+    <div class="sort-by-item">Distance</div>
+  </div>
+
+  <h1 class="filter-by-text">Filter by</h1>
+
+  <div class="filter-by-container">
+    <h1 class="sliebar-headings">Cuisine</h1>
+  </div>
+
+  <div class="no-active-filters">No avtive filters</div>
+
+  <div *ngFor="let category of categories">
+    <div class="sort-by-item"> {{ category }} </div>
+  </div>
+
+  <div class="preferences-container">
+    <h1 class="sliebar-headings">Preferences</h1>
+  </div>
+
+  <div class="no-active-filters">No avtive filters</div>
+
+
+  <div *ngFor="let preference of preferences">
+    <div class="sort-by-item"> {{ preference }} </div>
+  </div>
+
 </main>
