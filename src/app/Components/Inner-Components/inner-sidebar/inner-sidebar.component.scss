@@ -181,3 +181,20 @@ ion-icon {
     color: #ffffff;
     font-size: 28px;
 }
+
+.filter-chip {
+    width: 130px;
+    background-color: var(--ion-color-secondary);
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
