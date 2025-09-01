@@ -8,13 +8,17 @@
     --padding-bottom: 35px;
     --padding-start: 25px;
     --padding-end: 25px;
-    z-index: 100;
-    box-shadow: 5px 0 17px -4px #0006;
+    z-index: 150;
+    background: #ffffff;
+    box-shadow: none;
     width: 360px;
     flex: none;
 }
 
 .main-content-container {
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 0px;
     flex: 5;
 }

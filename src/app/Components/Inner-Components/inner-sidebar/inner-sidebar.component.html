@@ -17,9 +17,23 @@
   <h1 class="sliebar-headings">Sort by</h1>
 
   <div class="sort-by-container">
-    <div class="sort-by-item">Name</div>
-    <div class="sort-by-item">Min.Order</div>
-    <div class="sort-by-item">Distance</div>
+    <input type="radio" name="sort-option" id="sort-name" class="sort-radio" (change)="onSortOptionChange('name')">
+    <label for="sort-name" class="sort-by-item border">
+      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'name'"></ion-icon>
+      Name
+    </label>
+
+    <input type="radio" name="sort-option" id="sort-min-order" class="sort-radio"
+      (change)="onSortOptionChange('min-order')">
+    <label for="sort-min-order" class="sort-by-item">
+      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'min-order'"></ion-icon>
+      Min.Order</label>
+
+    <input type="radio" name="sort-option" id="sort-distance" class="sort-radio"
+      (change)="onSortOptionChange('distance')">
+    <label for="sort-distance" class="sort-by-item">
+      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'distance'"></ion-icon>
+      Distance</label>
   </div>
 
   <h1 class="filter-by-text">Filter by</h1>
@@ -28,21 +42,50 @@
     <h1 class="sliebar-headings">Cuisine</h1>
   </div>
 
-  <div class="no-active-filters">No avtive filters</div>
+  <div class="no-active-filters">No active filters</div>
 
-  <div *ngFor="let category of categories">
+  <div *ngFor="let category of showMoreCategories">
     <div class="sort-by-item"> {{ category }} </div>
+  </div>
+
+  <div *ngIf="!categoriesExpanded">
+    <p class="more-text" (click)="toggleCategories('more')">
+      <a>More</a>
+      <ion-icon name="chevron-down" class="dwon-up-icon"></ion-icon>
+    </p>
+  </div>
+
+  <div *ngIf="categoriesExpanded">
+    <p class="more-text" (click)="toggleCategories('less')">
+      <a>Less</a>
+      <ion-icon name="chevron-up" class="dwon-up-icon"></ion-icon>
+    </p>
   </div>
 
   <div class="preferences-container">
     <h1 class="sliebar-headings">Preferences</h1>
   </div>
 
-  <div class="no-active-filters">No avtive filters</div>
+  <div class="no-active-filters">No active filters</div>
 
-
-  <div *ngFor="let preference of preferences">
+  <div *ngFor="let preference of showMorePreferences">
     <div class="sort-by-item"> {{ preference }} </div>
+  </div>
+
+  <!-- Show More button when preferences are not expanded -->
+  <div *ngIf="!preferencesExpanded">
+    <p class="more-text" (click)="togglePreferences('more')">
+      <a>More</a>
+      <ion-icon name="chevron-down" class="dwon-up-icon"></ion-icon>
+    </p>
+  </div>
+
+  <!-- Show Less button when preferences are expanded -->
+  <div *ngIf="preferencesExpanded">
+    <p class="more-text" (click)="togglePreferences('less')">
+      <a>Less</a>
+      <ion-icon name="chevron-up" class="dwon-up-icon"></ion-icon>
+    </p>
   </div>
 
 </main>

@@ -33,14 +33,21 @@
 }
 
 .search-input {
-    --padding-start: 0;
-    border-radius: 8px;
     border: 1px solid #595F67;
+    border-radius: 8px;
     font-size: 14px;
-    font-style: italic;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
+    --padding-start: 15px;
     --padding-end: 10px;
+    --padding-top: 10px;
     --padding-bottom: 10px;
+    --placeholder-color: #6B7280;
+    --placeholder-opacity: 1;
+    --placeholder-font-style: italic;
+    --placeholder-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --placeholder-letter-spacing: 0.025em;
+    --color: #595f67;
 }
 
 .search-button {
@@ -58,12 +65,21 @@
 }
 
 .sort-by-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.sort-radio {
+    display: none;
 }
 
 .sort-by-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: poppins, sans-serif;
+    max-width: 200px;
     cursor: pointer;
     box-shadow: 0 3px 8px #a6adc933;
     font-size: 16px;
@@ -80,6 +96,45 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    --padding-top: 35px;
+    --padding-bottom: 35px;
+    --padding-start: 25px;
+    --padding-end: 25px;
+    -overflow: auto;
+    transition: all 0.3s ease;
+}
+
+.sort-by-item:hover {
+    opacity: .6;
+    max-width: 200px;
+    box-shadow: 0 3px 8px #a6adc933;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #545454;
+    border: 1px solid #545454;
+    background: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sort-radio:checked+.sort-by-item {
+    color: #fff;
+    background: var(--ion-color-primary);
+    border: 1px solid var(--ion-color-primary);
+    max-width: 200px;
+}
+
+.sort-radio:checked+.sort-by-item:hover {
+    background: #7c7c7c;
+    border: 1px solid #7c7c7c;
 }
 
 .filter-by-text {
@@ -104,4 +159,25 @@
 .preferences-container {
     display: flex;
     justify-content: space-between;
+}
+
+.more-text {
+    cursor: pointer;
+    width: 100%;
+    text-align: center !important;
+    text-decoration: underline !important;
+}
+
+a {
+    background-color: transparent;
+    color: var(--ion-color-secondary);
+}
+
+.dwon-up-icon {
+    margin-left: 3px;
+}
+
+ion-icon {
+    color: #ffffff;
+    font-size: 28px;
 }

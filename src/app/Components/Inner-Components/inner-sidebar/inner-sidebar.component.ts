@@ -11,6 +11,13 @@ import { IonicModule } from '@ionic/angular';
 })
 export class InnerSidebarComponent implements OnInit {
 
+  // Properties
+  showMoreCategories: string[] = [];
+  showMorePreferences: string[] = [];
+  categoriesExpanded: boolean = false;
+  preferencesExpanded: boolean = false;
+  selectedSortOption: string = '';
+
   categories: string[] = [
     "Acai Bowls",
     "American",
@@ -55,8 +62,34 @@ export class InnerSidebarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.showMoreCategories = this.categories.slice(0, 3);
+    this.showMorePreferences = this.preferences.slice(0, 3);
+  }
 
+  // Method to handle sort option selection
+  onSortOptionChange(option: string) {
+    this.selectedSortOption = option;
+  }
 
+  toggleCategories(action: string) {
+    if (action === 'more') {
+      this.showMoreCategories = this.categories;
+      this.categoriesExpanded = true;
+    } else if (action === 'less') {
+      this.showMoreCategories = this.categories.slice(0, 3);
+      this.categoriesExpanded = false;
+    }
+  }
+
+  togglePreferences(action: string) {
+    if (action === 'more') {
+      this.showMorePreferences = this.preferences;
+      this.preferencesExpanded = true;
+    } else if (action === 'less') {
+      this.showMorePreferences = this.preferences.slice(0, 3);
+      this.preferencesExpanded = false;
+    }
+  }
 
 }
