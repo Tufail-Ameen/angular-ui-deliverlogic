@@ -16,9 +16,13 @@ export class InnerSidebarComponent implements OnInit {
   showMorePreferences: string[] = [];
   categoriesExpanded: boolean = false;
   preferencesExpanded: boolean = false;
-  selectedSortOption: string = '';
   pickedCategory: string[] = [];
   pickedPreference: string[] = [];
+  clearCategoriesOptions: boolean = false;
+  clearPreferencesOptions: boolean = false;
+  noActiveFiltersCategories: boolean = true;
+  noActiveFiltersPreferences: boolean = true;
+  selectedSortOption: string = '';
 
   categories: string[] = [
     "Acai Bowls",
@@ -95,12 +99,44 @@ export class InnerSidebarComponent implements OnInit {
   }
 
   pickCategory(category: string) {
-    console.log(category);
+    // console.log(category);
     this.pickedCategory.push(category);
+    this.clearCategoriesOptions = true;
+    this.noActiveFiltersCategories = false;
   }
 
   pickPreference(preference: string) {
     this.pickedPreference.push(preference);
+    this.clearPreferencesOptions = true;
+    this.noActiveFiltersPreferences = false;
+  }
+
+  clearCategories() {
+    // console.log("clear categories");
+    this.pickedCategory = [];
+    this.noActiveFiltersCategories = true;
+  }
+
+  clearPreferences() {
+    // console.log("clear preferences");
+    this.pickedPreference = [];
+    this.noActiveFiltersPreferences = true;
+  }
+
+  clearAll() {
+    this.pickedCategory = [];
+    this.pickedPreference = [];
+    this.selectedSortOption = '';
+    this.noActiveFiltersCategories = true;
+    this.noActiveFiltersPreferences = true;
+    this.clearCategoriesOptions = false;
+    this.clearPreferencesOptions = false;
+    
+    // Uncheck all radio buttons to remove the :checked CSS classes
+    const radioButtons = document.querySelectorAll('input[name="sort-option"]') as NodeListOf<HTMLInputElement>;
+    radioButtons.forEach(radio => {
+      radio.checked = false;
+    });
   }
 
 }

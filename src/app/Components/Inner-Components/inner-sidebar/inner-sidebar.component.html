@@ -1,5 +1,5 @@
 <main>
-  <div class="clear-all">Clear All</div>
+  <div class="clear-all" (click)="clearAll()">Clear All</div>
 
   <div class="ion_web_inline">
     <h1 class="sliebar-headings">Search by</h1>
@@ -40,9 +40,10 @@
 
   <div class="filter-by-container">
     <h1 class="sliebar-headings">Cuisine</h1>
+    <div class="clear" (click)="clearCategories()" *ngIf="clearCategoriesOptions">Clear</div>
   </div>
 
-  <!-- <div class="no-active-filters">No active filters</div> -->
+  <div class="no-active-filters" *ngIf="noActiveFiltersCategories">No active filters</div>
 
   <div class="filter-chip" *ngFor="let category of pickedCategory">
     {{category}}
@@ -69,9 +70,10 @@
 
   <div class="preferences-container">
     <h1 class="sliebar-headings">Preferences</h1>
+    <div class="clear" (click)="clearPreferences()" *ngIf="clearPreferencesOptions">Clear</div>
   </div>
 
-  <!-- <div class="no-active-filters">No active filters</div> -->
+  <div class="no-active-filters" *ngIf="noActiveFiltersPreferences">No active filters</div>
 
   <div class="filter-chip" *ngFor="let preference of pickedPreference">
     {{preference}}
