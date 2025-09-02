@@ -1,0 +1,96 @@
+// .content {
+//     flex: 5;
+// }
+
+// .content-container {
+//     --padding-start: 45px;
+//     --padding-end: 45px;
+
+// }
+
+// .background-content {
+//     left: 0px;
+//     right: 0px;
+//     top: calc(var(--offset-top) * -1);
+//     bottom: calc(var(--offset-bottom) * -1);
+//     position: absolute;
+//     background: var(--background);
+// }
+
+.inner-scroll {
+    overflow-y: var(--overflow);
+    overscroll-behavior-y: contain;
+    z-index: 0;
+    will-change: scroll-position;
+
+    padding-left: unset;
+    padding-right: unset;
+    // padding-inline-start: 45px;
+    // padding-inline-end: 45px;
+
+
+    // left: 0px;
+    // right: 0px;
+    // top: calc(var(--offset-top) * -1);
+    // bottom: calc(var(--offset-bottom) * -1);
+    // padding-top: calc(var(--padding-top) + var(--offset-top));
+    // padding-bottom: calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom));
+    // position: absolute;
+    // color: var(--color);
+    // box-sizing: border-box;
+    // overflow: hidden;
+    // touch-action: pan-x pan-y pinch-zoom;
+}
+
+// .content-heading {
+//     font-weight: 700;
+//     font-size: 24px;
+//     margin-top: 20px;
+//     margin-bottom: 10px;
+//     line-height: 1.2;
+// }
+
+// .location-input-container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .location-input {
+//     position: relative;
+//     border: 1px solid #CACACA;
+//     border-radius: 8px;
+//     padding: 7px 25px 7px 20px;
+//     font-size: 15px;
+//     box-shadow: 0 3px 8px #a6adc933;
+//     cursor: pointer;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+// }
+
+// .address-label {
+//     padding-right: 3px;
+// }
+
+// .shareableLink {
+//     font-size: 12px;
+//     font-weight: 700;
+//     text-align: center;
+//     color: var(--ion-color-primary);
+// }
+
+// .restaurants-available {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .restaurants_page_heading {
+//     padding: 0 15px;
+//     font-weight: 700;
+//     font-size: 24px;
+//     margin-top: 20px;
+//     margin-bottom: 10px;
+//     line-height: 1.2;
+// }
