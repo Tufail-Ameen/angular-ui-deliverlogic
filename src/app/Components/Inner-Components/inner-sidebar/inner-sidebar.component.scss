@@ -177,7 +177,7 @@ a {
     margin-left: 3px;
 }
 
-ion-icon {
+.down-icons {
     color: #ffffff;
     font-size: 28px;
 }
@@ -197,4 +197,14 @@ ion-icon {
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+}
+
+.close-icon {
+    font-size: 16px;
+    position: absolute;
+    right: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #545454 !important;
 }

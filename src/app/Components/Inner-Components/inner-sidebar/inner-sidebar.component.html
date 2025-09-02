@@ -18,21 +18,21 @@
 
   <div class="sort-by-container">
     <input type="radio" name="sort-option" id="sort-name" class="sort-radio" (change)="onSortOptionChange('name')">
-    <label for="sort-name" class="sort-by-item border">
-      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'name'"></ion-icon>
+    <label for="sort-name" class="sort-by-item">
+      <ion-icon name="arrow-down" class="down-icons" *ngIf="selectedSortOption === 'name'"></ion-icon>
       Name
     </label>
 
     <input type="radio" name="sort-option" id="sort-min-order" class="sort-radio"
       (change)="onSortOptionChange('min-order')">
     <label for="sort-min-order" class="sort-by-item">
-      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'min-order'"></ion-icon>
+      <ion-icon name="arrow-down" class="down-icons" *ngIf="selectedSortOption === 'min-order'"></ion-icon>
       Min.Order</label>
 
     <input type="radio" name="sort-option" id="sort-distance" class="sort-radio"
       (change)="onSortOptionChange('distance')">
     <label for="sort-distance" class="sort-by-item">
-      <ion-icon name="arrow-down" *ngIf="selectedSortOption === 'distance'"></ion-icon>
+      <ion-icon name="arrow-down" class="down-icons" *ngIf="selectedSortOption === 'distance'"></ion-icon>
       Distance</label>
   </div>
 
@@ -44,12 +44,13 @@
 
   <!-- <div class="no-active-filters">No active filters</div> -->
 
-  <div class="filter-chip">
-    All Preferences
+  <div class="filter-chip" *ngFor="let category of pickedCategory">
+    {{category}}
+    <ion-icon name="close" class="close-icon"></ion-icon>
   </div>
 
   <div *ngFor="let category of showMoreCategories">
-    <div class="sort-by-item"> {{ category }} </div>
+    <div class="sort-by-item" (click)="pickCategory(category)"> {{ category }} </div>
   </div>
 
   <div *ngIf="!categoriesExpanded">
@@ -72,12 +73,13 @@
 
   <!-- <div class="no-active-filters">No active filters</div> -->
 
-  <div class="filter-chip">
-    All Preferences
+  <div class="filter-chip" *ngFor="let preference of pickedPreference">
+    {{preference}}
+    <ion-icon name="close" class="close-icon"></ion-icon>
   </div>
 
   <div *ngFor="let preference of showMorePreferences">
-    <div class="sort-by-item"> {{ preference }} </div>
+    <div class="sort-by-item" (click)="pickPreference(preference)"> {{ preference }} </div>
   </div>
 
   <!-- Show More button when preferences are not expanded -->

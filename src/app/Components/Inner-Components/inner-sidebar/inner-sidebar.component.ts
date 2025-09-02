@@ -17,6 +17,8 @@ export class InnerSidebarComponent implements OnInit {
   categoriesExpanded: boolean = false;
   preferencesExpanded: boolean = false;
   selectedSortOption: string = '';
+  pickedCategory: string[] = [];
+  pickedPreference: string[] = [];
 
   categories: string[] = [
     "Acai Bowls",
@@ -90,6 +92,15 @@ export class InnerSidebarComponent implements OnInit {
       this.showMorePreferences = this.preferences.slice(0, 3);
       this.preferencesExpanded = false;
     }
+  }
+
+  pickCategory(category: string) {
+    console.log(category);
+    this.pickedCategory.push(category);
+  }
+
+  pickPreference(preference: string) {
+    this.pickedPreference.push(preference);
   }
 
 }
