@@ -1,28 +1,71 @@
-<!-- <div class="content" >
+<main class="main">
+  <div class="main-content">
+    <div class="inner-scroll-content">
 
-  <ion-content class="content-container">
-    <div class="background-content"></div>
-    <main class="inner-scroll">
+      <div class="toolbar-container ">
+        <div class="location-input-container">
+          <div class="location-input">
+            <span></span>
+            <span class="address-label ">takeout > ASAP, 09/02</span>
+          </div>
+        </div>
 
-    </main>
-  </ion-content>
+        <p class="shareableLink">Share this easy ordering link with friends</p>
+      </div>
 
-</div>
-<div class="location-input-container-wrapper">
-  <div class="location-input-container">
-    <div class="location-input">
-      <span></span>
-      <span class="address-label">takeout > ASAP, 09/02</span>
+      <ion-row class="" style="height: 100%;">
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-row>
+            <ion-col size="1"></ion-col>
+            <ion-col size="10">
+
+              <div>
+                <h1 class="restaurants-available-heading">10 Restaurants Available</h1>
+              </div>
+
+              <ion-row class="">
+                <ion-col size="6" class="" style="padding: 5px;;" *ngFor="let restaurant of restaurants">
+                  <div class="card-container">
+                    <div class="">
+                      <img class="card-image" [src]="restaurant.image" [alt]="restaurant.name + ' image'"
+                        (error)="onImageError($event)">
+                    </div>
+                    <div class="item-content">
+                      <ion-card-title class="resturant-card">
+                        <div class="title">
+                          {{ restaurant.name }}
+                        </div>
+                      </ion-card-title>
+
+                      <div style="margin-top: 14px;">
+                        <div class="description">
+                          {{ restaurant.categories.join(', ') }}
+                        </div>
+                      </div>
+
+                      <div class="info">
+                        <span class="time-container">
+                          <ion-icon name="time" class="time-icon"></ion-icon>
+                          <div class=""> {{ restaurant.time }} </div>
+                        </span>
+                        <span class="distance-container">
+                          <ion-icon name="location" class="location-icon"></ion-icon>
+                          <div class="distance">{{ restaurant.distance }}</div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+        <ion-col size="2"></ion-col>
+      </ion-row>
+
     </div>
   </div>
-</div>
-
-<p class="shareableLink">Share this easy ordering link with friends</p>
-
-<div class="restaurants-available">
- <h1 class="restaurants_page_heading">10 Restaurants Available</h1>
-</div> -->
-
-<main class="inner-scroll border">
-  helo i ma here to test you
 </main>
