@@ -1,18 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { OrdertypeModalComponent } from "../ordertype-modal/ordertype-modal.component";
 
 @Component({
   selector: 'app-inner-maincontent',
   templateUrl: './inner-maincontent.component.html',
   styleUrls: ['./inner-maincontent.component.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [IonicModule, CommonModule, OrdertypeModalComponent]
 })
 export class InnerMaincontentComponent implements OnInit {
-  
+
 
   date = new Date();
+  isOrderTypeModalOpen = false;
 
   restaurants = [
     {
@@ -88,7 +90,35 @@ export class InnerMaincontentComponent implements OnInit {
   ];
 
   openOrderTypeModal() {
-    console.log('openOrderTypeModal');
+    console.log('openOrderTypeModal called');
+    console.log('isOrderTypeModalOpen before:', this.isOrderTypeModalOpen);
+    this.isOrderTypeModalOpen = true;
+    console.log('isOrderTypeModalOpen after:', this.isOrderTypeModalOpen);
+  }
+
+  onModalPresent() {
+    console.log('Modal presented');
+  }
+
+  onModalDismiss() {
+    console.log('Modal dismissed');
+    this.isOrderTypeModalOpen = false;
+  }
+
+  closeModal() {
+    this.isOrderTypeModalOpen = false;
+  }
+
+  selectOrderType(type: string) {
+    console.log('Selected order type:', type);
+    // Handle the order type selection here
+    this.closeModal();
+  }
+
+  onOrderTypeSelected(type: string) {
+    console.log('Order type selected from modal:', type);
+    // Handle the order type selection here
+    this.closeModal();
   }
 
   constructor() { }

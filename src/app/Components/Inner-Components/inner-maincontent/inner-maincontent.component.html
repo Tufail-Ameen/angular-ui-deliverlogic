@@ -71,3 +71,12 @@
     </div>
   </div>
 </main>
+
+<ion-modal #orderTypeModal [isOpen]="isOrderTypeModalOpen" (didDismiss)="onModalDismiss()">
+  <ng-template>
+    <app-ordertype-modal 
+      (closeModalEvent)="closeModal()"
+      (orderTypeSelected)="onOrderTypeSelected($event)">
+    </app-ordertype-modal>
+  </ng-template>
+</ion-modal>
