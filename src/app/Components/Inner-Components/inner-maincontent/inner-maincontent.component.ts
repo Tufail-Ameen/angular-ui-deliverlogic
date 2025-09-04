@@ -10,6 +10,9 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule]
 })
 export class InnerMaincontentComponent implements OnInit {
+  
+
+  date = new Date();
 
   restaurants = [
     {
@@ -84,6 +87,9 @@ export class InnerMaincontentComponent implements OnInit {
     }
   ];
 
+  openOrderTypeModal() {
+    console.log('openOrderTypeModal');
+  }
 
   constructor() { }
 

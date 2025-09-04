@@ -61,21 +61,20 @@
     position: relative;
     border: 1px solid #CACACA;
     border-radius: 8px;
-    padding: 7px 25px 7px 20px;
+    padding: 9px 25px 9px 20px;
     font-size: 15px;
     box-shadow: 0 3px 8px #a6adc933;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    // gap: 4px;
 }
 
 .location-input:hover {
     background: rgb(243, 243, 243);
-}
-
-.address-label {
-    padding-right: 3px;
 }
 
 .shareableLink {

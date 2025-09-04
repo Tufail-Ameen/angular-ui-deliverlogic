@@ -2,11 +2,13 @@
   <div class="main-content">
     <div class="inner-scroll-content">
 
-      <div class="toolbar-container ">
+      <div class="toolbar-container">
         <div class="location-input-container">
-          <div class="location-input">
-            <span></span>
-            <span class="address-label ">takeout > ASAP, 09/02</span>
+          <div class="location-input" (click)="openOrderTypeModal()">
+            <ion-icon name="location" style="color: var(--ion-color-primary); font-size: 20px; margin-right: 4px;"
+              class=""></ion-icon>
+            <span>Takeout > ASAP, {{ date | date:'MM/dd' }}</span>
+            <ion-icon name="chevron-down" class="dwon-up-icon"></ion-icon>
           </div>
         </div>
 
