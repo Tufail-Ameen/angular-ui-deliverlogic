@@ -11,6 +11,11 @@ import { IonicModule } from '@ionic/angular';
 })
 export class OrdertypeModalComponent implements OnInit {
 
+  // Properties
+  ordertype: string = "takeout";
+
+  date = new Date();
+
   @Output() closeModalEvent = new EventEmitter<void>();
   @Output() orderTypeSelected = new EventEmitter<string>();
 
@@ -30,6 +35,10 @@ export class OrdertypeModalComponent implements OnInit {
     console.log('Selected order type:', type);
     this.orderTypeSelected.emit(type);
     this.closeModal();
+  }
+
+  orderType(type: string) {
+    this.ordertype = type;
   }
 
 }
